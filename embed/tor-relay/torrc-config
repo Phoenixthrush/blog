@@ -1,0 +1,7 @@
+# https://community.torproject.org/relay/setup/guard/debian-ubuntu/
+
+Nickname    myNiceRelay
+ContactInfo your@e-mail
+ORPort      443
+ExitRelay   0
+SocksPort   0

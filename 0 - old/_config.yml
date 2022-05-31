@@ -1,0 +1,12 @@
+theme: jekyll-theme-cayman
+
+author: Phoenixthrush
+title: "Phoenixthrush's Blog 🤍"
+description: "'Everyone thinks of changing the world, but no one thinks of changing himself.' – Leo Tolstoy"
+
+social-network-links:
+  email: "contact@phoenixthrush.com"
+  github: Phoenixthrush
+
+plugins:
+  - jekyll-seo-tag
