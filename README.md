@@ -2,31 +2,31 @@
 
 Welcome to my blog! 😄 <br> I'm excited to share my latest projects and insights with you. 🚀
 
-### [The Epic Journey of PhoenixHub](https://blog.phoenixthrush.com/History-of-PhoenixHub) 🌟
+### [The Epic Journey of PhoenixHub](https://www.phoenixthrush.com/blog/History-of-PhoenixHub) 🌟
 
 no description yet
 
-### [Crafting Your Personal Linux Repo on Debian-Based Distros](https://blog.phoenixthrush.com/Create-Linux-Repo) 🐧
+### [Crafting Your Personal Linux Repo on Debian-Based Distros](https://www.phoenixthrush.com/blog/Create-Linux-Repo) 🐧
 
 no description yet
 
-### [Unlocking Windows for Free](https://blog.phoenixthrush.com/Windows-Activation) 🔓
+### [Unlocking Windows for Free](https://www.phoenixthrush.com/blog/Windows-Activation) 🔓
 
 no description yet
 
-### [Cracking the Code: WPA2 WiFi Networks](https://blog.phoenixthrush.com/WPA2-Cracking) 📡
+### [Cracking the Code: WPA2 WiFi Networks](https://www.phoenixthrush.com/blog/WPA2-Cracking) 📡
 
 no description yet 
 
-### [Sneaking Past UAC: Admin Rights on Windows](https://blog.phoenixthrush.com/UAC-Bypass) 🧙
+### [Sneaking Past UAC: Admin Rights on Windows](https://www.phoenixthrush.com/blog/UAC-Bypass) 🧙
 
 no description yet
 
-### [Raspberry Pi Setup sans Monitor](https://blog.phoenixthrush.com/RPI-Headless-Setup) 🚀
+### [Raspberry Pi Setup sans Monitor](https://www.phoenixthrush.com/blog/RPI-Headless-Setup) 🚀
 
 no description yet
 
-### [Enabling WSL for Windows](https://blog.phoenixthrush.com/WSL-Installation) 🚀
+### [Enabling WSL for Windows](https://www.phoenixthrush.com/blog/WSL-Installation) 🚀
 
 no description yet
 
