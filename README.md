@@ -22,7 +22,7 @@ no description yet
 
 no description yet
 
-### [Raspberry Pi Setup sans Monitor](https://www.phoenixthrush.com/blog/RPI-Headless-Setup) 🚀
+### [Raspberry Pi Setup without a Monitor](https://www.phoenixthrush.com/blog/RPI-Headless-Setup) 🚀
 
 no description yet
 
