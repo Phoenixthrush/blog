@@ -2,31 +2,31 @@
 
 Welcome to my blog! 😄 <br> I'm excited to share my latest projects and insights with you. 🚀
 
-### [The Epic Journey of PhoenixHub](https://www.phoenixthrush.com/blog/History-of-PhoenixHub) 🌟
+### [The Epic Journey of PhoenixHub](https://www.phoenixthrush.com/blog-old/pages/History-of-PhoenixHub) 🌟
 
 no description yet
 
-### [Crafting Your Personal Linux Repo on Debian-Based Distros](https://www.phoenixthrush.com/blog/Create-Linux-Repo) 🐧
+### [Crafting Your Personal Linux Repo on Debian-Based Distros](https://www.phoenixthrush.com/blog-old/pages/Create-Linux-Repo) 🐧
 
 no description yet
 
-### [Unlocking Windows for Free](https://www.phoenixthrush.com/blog/Windows-Activation) 🔓
+### [Unlocking Windows for Free](https://www.phoenixthrush.com/blog-old/pages/Windows-Activation) 🔓
 
 no description yet
 
-### [Cracking the Code: WPA2 WiFi Networks](https://www.phoenixthrush.com/blog/WPA2-Cracking) 📡
+### [Cracking the Code: WPA2 WiFi Networks](https://www.phoenixthrush.com/blog-old/pages/WPA2-Cracking) 📡
 
 no description yet 
 
-### [Sneaking Past UAC: Admin Rights on Windows](https://www.phoenixthrush.com/blog/UAC-Bypass) 🧙
+### [Sneaking Past UAC: Admin Rights on Windows](https://www.phoenixthrush.com/blog-old/pages/UAC-Bypass) 🧙
 
 no description yet
 
-### [Raspberry Pi Setup without a Monitor](https://www.phoenixthrush.com/blog/RPI-Headless-Setup) 🚀
+### [Raspberry Pi Setup without a Monitor](https://www.phoenixthrush.com/blog-old/pages/RPI-Headless-Setup) 🚀
 
 no description yet
 
-### [Enabling WSL for Windows](https://www.phoenixthrush.com/blog/WSL-Installation) 🚀
+### [Enabling WSL for Windows](https://www.phoenixthrush.com/blog-old/pages/WSL-Installation) 🚀
 
 no description yet
 
