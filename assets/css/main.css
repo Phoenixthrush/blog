@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import "normalize.css";
+@import "prism.css";
+
 .main-container {
     width: 75vw;
     margin: auto;
