@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="heading">Raspberry Pi Setup without a Monitor</h1>
+        <div class="text-content">
+            <h2>Windows</h2>
+            <ol>
+                <li>Get the <a href="https://downloads.raspberrypi.org/imager/imager_latest.exe">Raspberry Pi Imager tool</a></li>
+                <li>Use it to put the Raspbian image on your Raspberry Pi's SD card</li>
+                <li>Take out the SD card, then put it back in.</li>
+                <li>Open File Explorer, go to the View tab in the menu, and check the box that says "File name extensions"</li>
+                <li>Make a new empty text file and name it "ssh" (remove the ".txt" part)</li>
+                <li>If you want to connect to Wi-Fi, make another file named "wpa_supplicant.conf".</li>
+            </ol>
+            <h3>(wpa_supplicant.conf)</h3>
+            <pre>
+                <code class="language-plain">
+country=DE
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    scan_ssid=1
+    ssid="your_wifi_ssid"
+    psk="your_wifi_password"
+}
+                </code>
+            </pre>
+            <h2>MacOS & Linux</h2>
+            <p>for linux (debian) based distros</p>
+            <pre>
+                <code class="language-bash">
+sudo apt install rpi-imager
+                </code>
+            </pre>
+            <p>for MacOS click <a href="https://downloads.raspberrypi.org/imager/imager_latest.dmg">here</a></p>
+            <h3>enable networking and ssh</h3>
+            <pre>
+                <code class="language-bash">
+mount /dev/...1 /mnt # "lsblk" to list drives
+cd /mnt
+
+touch ssh # create empty file named "ssh"
+cat &lt;&lt;EOF &gt; wpa_supplicant.conf
+country=DE
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    scan_ssid=1
+    ssid="your_wifi_ssid"
+    psk="your_wifi_password"
+}
+EOF
+                </code>
+            </pre>
+            <h2>That's it!</h2>
+            <p>
+                If you have questions left contact me at contact@phoenixthrush.com and have fun with your Raspberry Pi!
+            </p>
+        </div>
+    </div>
+    <script src="../../assets/js/prism.js"></script>
+</body>
+</html>
