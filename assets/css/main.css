@@ -25,3 +25,11 @@
     cursor: pointer;
     margin-bottom: 1em;
 }
+
+.item h3 {
+    margin-top: 0;
+}
+
+.item p {
+    margin-bottom: 0;
+}
