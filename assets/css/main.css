@@ -33,3 +33,8 @@
 .item p {
     margin-bottom: 0;
 }
+
+.banner-link {
+    text-decoration: none;
+    color: inherit;
+}
