@@ -63,7 +63,7 @@ sudo aircrack-ng hash.cap -w /path/to/the/dictionary # e.g. /usr/share/wordlist/
             </pre>
             <h2>Crack the hash via bruteforce (cpu, crunch/ aircrack-ng)</h2>
             <h3>
-            generate a 8-10 long password with the chracters "abcdefgABC123?"
+                generate a 8-10 long password with the chracters "abcdefgABC123?"
             </h3>
             <pre>
                 <code class="language-bash">
@@ -72,9 +72,9 @@ crunch 8 10 abcdefgABC123? | sudo aircrack-ng -e wifiname -w - /path/to/the/hash
             </pre>
             <h2>Crack the hash via dictionary attack (gpu, hashcat)</h2>
             <p>
-            convert cap file from airodump-ng to hc22000 for hashcat using
-            <a href="https://hashcat.net/cap2hashcat/">cap2hashcat</a> online converter
-                </p>
+                convert cap file from airodump-ng to hc22000 for hashcat using
+                <a href="https://hashcat.net/cap2hashcat/">cap2hashcat</a> online converter
+            </p>
             <pre>
                 <code class="language-bash">
 hashcat -m 22000 hash.hc22000 rockyou.txt
@@ -108,4 +108,5 @@ hashcat -m 22000 hash.hc22000 -a 3 ?d?d?d?d?d?d?d?d # 8 digit numeric password
     </div>
     <script src="../../assets/js/prism.js"></script>
 </body>
+
 </html>

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../../assets/css/main.css">
-		<title>Document</title>
-	</head>
-	<body>
-		<div class="main-container">
-			<h1 class="heading">Creating and hosting your own apt repo </h1>
-			<div class="text-content">
-				<h2>Creating your debian package</h2>
-				<h3>creating folder structure for package named nezuko</h3>
-				<pre>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="heading">Creating and hosting your own apt repo </h1>
+        <div class="text-content">
+            <h2>Creating your debian package</h2>
+            <h3>creating folder structure for package named nezuko</h3>
+            <pre>
                 <code class="language-bash">
 mkdir -p nezuko/DEBIAN
 mkdir -p nezuko/usr/bin/
 vim nezuko/DEBIAN/control # or editor of choice
 				</code>
             	</pre>
-				<h3>(nezuko/DEBIAN/control)</h3>
-				<pre>
+            <h3>(nezuko/DEBIAN/control)</h3>
+            <pre>
                 <code class="language-plain">
 Package: nezuko
 Version: 0.0.1
@@ -29,30 +31,30 @@ Maintainer: phoenixthrush &lt;contact@phoenixthrush.com&gt;
 Description: does something nice
                 </code>
             </pre>
-				<p>don't forget to copy your executable to nezuko/usr/bin<br>chmod it using "chmod +x nezuko/usr/bin/xyz"</p>
-				<h3>building the deb file</h3>
-				<pre>
+            <p>don't forget to copy your executable to nezuko/usr/bin<br>chmod it using "chmod +x nezuko/usr/bin/xyz"</p>
+            <h3>building the deb file</h3>
+            <pre>
             <code class="language-bash">
 dpkg-deb --build nezuko
             </code>
         </pre>
-				<p>rename your nezuko.deb to nezuko_0.0.1-1_all.deb</p>
-				<h2>Create new repo</h2>
-				<h3>install needed dependencies</h3>
-				<pre>
+            <p>rename your nezuko.deb to nezuko_0.0.1-1_all.deb</p>
+            <h2>Create new repo</h2>
+            <h3>install needed dependencies</h3>
+            <pre>
             <code class="language-bash">
 sudo apt install gnupg dpkg-dev -y
             </code>
         </pre>
-				<p>optionally create a directory with all your deb packages</p>
-				<pre>
+            <p>optionally create a directory with all your deb packages</p>
+            <pre>
             <code class="language-bash">
 mkdir packages
 cd packages
             </code>
         </pre>
-				<h3>change everything needed</h3>
-				<pre>
+            <h3>change everything needed</h3>
+            <pre>
             <code class="language-bash">
 EMAIL="contact@phoenixthrush.com"
 
@@ -71,8 +73,8 @@ gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
 echo "deb [signed-by=/usr/share/keyrings/phoenixthrush-archive-keyring.gpg] https://phoenixthrush.com/repo/stable ./" > phoenixthrush-packages.list 
             </code>
         </pre>
-				<h3>if you want to add more deb packages afterwards</h3>
-				<pre>
+            <h3>if you want to add more deb packages afterwards</h3>
+            <pre>
             <code class="language-bash">
 EMAIL="contact@phoenixthrush.com"
 
@@ -84,20 +86,21 @@ gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
 gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
             </code>
         </pre>
-				<h2>Create a shell script or share this to your friends</h2>
-				<pre>
+            <h2>Create a shell script or share this to your friends</h2>
+            <pre>
             <code class="language-bash">
 sudo curl -sSL https://phoenixthrush.com/repo/stable/ultrasecretcert.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/phoenixthrush-archive-keyring.gpg >/dev/null 2>&1
 sudo curl -sSL --compressed -o /etc/apt/sources.list.d/phoenixthrush-packages.list "https://phoenixthrush.com/repo/stable/phoenixthrush-packages.list" >/dev/null 2>&1
 sudo apt update >/dev/null 2>&1
             </code>
         </pre>
-				<p>don't forget to backup your private key and move it to a secure location!</p>
-				<h2>That's it!</h2>
-				<p>This is just a basic tutorial.<br>Advanced configurations can be found <a href="https://wiki.debian.org/Packaging">here</a>.</p>
-				<p>If you have questions left contact me at contact@phoenixthrush.com and have fun creating your own repo!</p>
-			</div>
-		</div>
-		<script src="../../assets/js/prism.js"></script>
-	</body>
+            <p>don't forget to backup your private key and move it to a secure location!</p>
+            <h2>That's it!</h2>
+            <p>This is just a basic tutorial.<br>Advanced configurations can be found <a href="https://wiki.debian.org/Packaging">here</a>.</p>
+            <p>If you have questions left contact me at contact@phoenixthrush.com and have fun creating your own repo!</p>
+        </div>
+    </div>
+    <script src="../../assets/js/prism.js"></script>
+</body>
+
 </html>
